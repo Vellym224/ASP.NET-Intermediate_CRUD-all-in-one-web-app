@@ -1,0 +1,41 @@
+﻿@model List<ITSAIntermediate_VelaphiMhlanga.Models.Domain.RecUser>
+
+@{
+}
+
+
+<h1> USERS LIST </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>DateOfBirth</th>
+            <th>IdentityNumber</th>
+            <th>Address</th>
+            <th>emailAddress</th>
+            <th>ContactNumber</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recuser in Model)
+        {
+            <tr>
+                <td>@recuser.Id</td>
+                <td>@recuser.Name</td>
+                <td>@recuser.Surname></td>
+                <td>@recuser.DateOfBirth.ToString("dd-MM-yyyy")</td>
+                <td>@recuser.IdentityNumber</td>
+                <td>@recuser.Address</td>
+                <td>@recuser.EmailAddress</td>
+                <td>@recuser.ContactNumber</td>
+                <td><a href="RecUsers/View/@recuser.Id">View</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

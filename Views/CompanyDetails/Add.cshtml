@@ -1,0 +1,36 @@
+﻿@model ITSAIntermediate_VelaphiMhlanga.Models.AddCompanyDetailsViewModel
+
+@{
+}
+
+<h1>Add COMPANY DETAILS </h1>
+<form method="post" action="Add" class="mt-3">
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email Address</label>
+        <input type="email" class="form-control" asp-for="EmailAddress">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Contact Number</label>
+        <input type="number" class="form-control" asp-for="ContactNumber">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Registration Number</label>
+        <input type="number" class="form-control" asp-for="RegistrationNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Address</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Type of Business</label>
+        <input type="text" class="form-control" asp-for="BusinessType">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

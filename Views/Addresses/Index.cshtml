@@ -1,0 +1,39 @@
+﻿@model List<ITSAIntermediate_VelaphiMhlanga.Models.Domain.Address>
+
+@{
+}
+
+<h1> ADDRESS LIST </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Country</th>
+            <th>Province</th>
+            <th>City</th>
+            <th>Suburb</th>
+            <th>PostalCode</th>
+            <th>UnitNumber</th>
+            <th>ComplexName</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var address in Model)
+        {
+            <tr>
+                <td>@address.Id</td>
+                <td>@address.Country</td>
+                <td>@address.Province></td>
+                <td>@address.City></td>
+                <td>@address.Suburb></td>
+                <td>@address.PostalCode.ToString()</td>
+                <td>@address.UnitNumber.ToString("")</td>
+                <td>@address.ComplexName></td>
+                <td><a href="Address/View/@address.Country">View</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

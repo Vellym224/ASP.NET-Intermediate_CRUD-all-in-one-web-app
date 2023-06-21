@@ -1,4 +1,4 @@
-namespace ITSAIntermediate_VelaphiMhlanga.Models
+namespace ITSAIntermediate_VelaphiMhlanga.Models.Domain
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,38 @@
+﻿@model List<ITSAIntermediate_VelaphiMhlanga.Models.Domain.CompanyDetail>
+
+
+@{
+}
+
+<h1> COMPANY DETAIL LIST </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>EmailAddress</th>
+            <th>ContactNumber</th>
+            <th>RegistrationNumber</th>
+            <th>Address</th>
+            <th>BusinessType</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var companyDetails in Model)
+        {
+            <tr>
+                <td>@companyDetails.Id</td>
+                <td>@companyDetails.Name</td>
+                <td>@companyDetails.EmailAddress.ToString()></td>
+                <td>@companyDetails.ContactNumber.ToString("")></td>
+                <td>@companyDetails.RegistrationNumber.ToString("")></td>
+                <td>@companyDetails.Address></td>
+                <td>@companyDetails.BusinessType</td>
+                <td><a href="CompanyDetails/View/@companyDetails.Name">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

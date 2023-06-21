@@ -1,4 +1,4 @@
-﻿using ITSAIntermediate_VelaphiMhlanga.Models;
+﻿using ITSAIntermediate_VelaphiMhlanga.Models.Domain;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
