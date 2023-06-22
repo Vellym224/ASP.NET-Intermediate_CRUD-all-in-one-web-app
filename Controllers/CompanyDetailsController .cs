@@ -74,16 +74,16 @@ namespace ITSAIntermediate_VelaphiMhlanga_.Controllers
         [HttpPost]
         public async Task<IActionResult> View(UpdateCompanyDetailsViewModel model)
         {
-            var companyDetail = await applicationDbContext.CompanyDetails.FindAsync(model.Id);
+            var companyDetails = await applicationDbContext.CompanyDetails.FindAsync(model.Id);
 
-            if (companyDetail != null)
+            if (companyDetails != null)
             {
-                companyDetail.Name = model.Name;
-                companyDetail.EmailAddress = model.EmailAddress;
-                companyDetail.ContactNumber = model.ContactNumber;
-                companyDetail.RegistrationNumber = model.RegistrationNumber;
-                companyDetail.Address = model.Address;
-                companyDetail.BusinessType = model.BusinessType;
+                companyDetails.Name = model.Name;
+                companyDetails.EmailAddress = model.EmailAddress;
+                companyDetails.ContactNumber = model.ContactNumber;
+                companyDetails.RegistrationNumber = model.RegistrationNumber;
+                companyDetails.Address = model.Address;
+                companyDetails.BusinessType = model.BusinessType;
 
 
                 await applicationDbContext.SaveChangesAsync();
@@ -100,11 +100,11 @@ namespace ITSAIntermediate_VelaphiMhlanga_.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(UpdateCompanyDetailsViewModel model)
         {
-            var companyDetail = await applicationDbContext.CompanyDetails.FindAsync(model.Id);
+            var companyDetails = await applicationDbContext.CompanyDetails.FindAsync(model.Id);
 
-            if (companyDetail != null)
+            if (companyDetails != null)
             {
-                applicationDbContext.CompanyDetails.Remove(companyDetail);
+                applicationDbContext.CompanyDetails.Remove(companyDetails);
                 await applicationDbContext.SaveChangesAsync();
 
                 return RedirectToAction("Index");

@@ -93,13 +93,13 @@ namespace ITSAIntermediate_VelaphiMhlanga.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(UpdateUserViewModel model)
+        public async Task<IActionResult> Delete(UpdateRecUserViewModel model)
         {
-            var employeeDetails = await applicationDbContext.EmployeeDetail.FindAsync(model.Id);
+            var employeeDetails = await applicationDbContext.EmployeeDetails.FindAsync(model.Id);
 
             if (employeeDetails != null)
             {
-                applicationDbContext.EmployeeDetail.Remove(employeeDetails);
+                applicationDbContext.EmployeeDetails.Remove(employeeDetails);
                 await applicationDbContext.SaveChangesAsync();
 
                 return RedirectToAction("Index");

@@ -1,6 +1,6 @@
 ﻿namespace ITSAIntermediate_VelaphiMhlanga.Models
 {
-    public class UpdateUserViewModel
+    public class UpdateRecUserViewModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

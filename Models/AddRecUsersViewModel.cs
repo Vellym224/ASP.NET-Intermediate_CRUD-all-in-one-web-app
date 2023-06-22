@@ -1,6 +1,6 @@
 ﻿namespace ITSAIntermediate_VelaphiMhlanga.Models
 {
-    public class AddUserViewModel
+    public class AddRecUsersViewModel
     {
 
         public string Name { get; set; }

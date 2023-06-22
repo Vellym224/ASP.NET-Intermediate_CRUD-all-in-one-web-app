@@ -9,6 +9,6 @@
         public string Suburb { get; set; }
         public string PostalCode { get; set; }
         public int UnitNumber { get; set; }
-        public int ComplexName { get; set; }
+        public string ComplexName { get; set; }
     }
 }
