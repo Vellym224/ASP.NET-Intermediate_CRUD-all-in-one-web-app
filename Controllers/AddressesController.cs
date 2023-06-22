@@ -18,8 +18,8 @@ namespace ITSAIntermediate_VelaphiMhlanga.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var address = await applicationDbContext.Addresses.ToListAsync();
-            return View(address);
+            var addresses = await applicationDbContext.Addresses.ToListAsync();
+            return View(addresses);
         }
 
         [HttpGet]
