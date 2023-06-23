@@ -20,17 +20,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var companyDetails in Model)
+        @foreach (var companydetails in Model)
         {
             <tr>
-                <td>@companyDetails.Id</td>
-                <td>@companyDetails.Name</td>
-                <td>@companyDetails.EmailAddress.ToString()></td>
-                <td>@companyDetails.ContactNumber.ToString("")></td>
-                <td>@companyDetails.RegistrationNumber.ToString("")></td>
-                <td>@companyDetails.Address></td>
-                <td>@companyDetails.BusinessType</td>
-                <td><a href="CompanyDetails/View/@companyDetails.Name">View</a></td>
+                <td>@companydetails.Id</td>
+                <td>@companydetails.Name</td>
+                <td>@companydetails.EmailAddress.ToString()></td>
+                <td>@companydetails.ContactNumber.ToString("")></td>
+                <td>@companydetails.RegistrationNumber.ToString("")></td>
+                <td>@companydetails.Address></td>
+                <td>@companydetails.BusinessType</td>
+                <td><a href="CompanyDetails/View/@companydetails.Id">View</a></td>
             </tr>
         }
     </tbody>

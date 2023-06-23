@@ -1,13 +1,13 @@
 ﻿using ITSAIntermediate_VelaphiMhlanga.Data;
 using ITSAIntermediate_VelaphiMhlanga.Models;
 using ITSAIntermediate_VelaphiMhlanga.Models.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace ITSAIntermediate_VelaphiMhlanga.Controllers
 {
-
-
+    [Authorize]
     public class EmployeeDetailsController : Controller
     {
         private readonly ApplicationDbContext applicationDbContext;
@@ -23,6 +23,7 @@ namespace ITSAIntermediate_VelaphiMhlanga.Controllers
             var employeeDetails = await applicationDbContext.EmployeeDetails.ToListAsync();
             return View(employeeDetails);
         }
+
         [HttpGet]
         public IActionResult Add()
         {

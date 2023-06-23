@@ -20,18 +20,18 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var address in Model)
+        @foreach (var addresslist in Model)
         {
             <tr>
-                <td>@address.Id</td>
-                <td>@address.Country</td>
-                <td>@address.Province></td>
-                <td>@address.City></td>
-                <td>@address.Suburb></td>
-                <td>@address.PostalCode.ToString()</td>
-                <td>@address.UnitNumber.ToString("")</td>
-                <td>@address.ComplexName></td>
-                <td><a href="Address/View/@address.Country">View</a></td>
+                <td>@addresslist.Id</td>
+                <td>@addresslist.Country</td>
+                <td>@addresslist.Province></td>
+                <td>@addresslist.City></td>
+                <td>@addresslist.Suburb></td>
+                <td>@addresslist.PostalCode.ToString()</td>
+                <td>@addresslist.UnitNumber.ToString("")</td>
+                <td>@addresslist.ComplexName></td>
+                <td><a href="Address/View/@addresslist.Id">View</a></td>
             </tr>
         }
 

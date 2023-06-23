@@ -1,12 +1,14 @@
 ﻿using ITSAIntermediate_VelaphiMhlanga.Data;
 using ITSAIntermediate_VelaphiMhlanga.Models;
 using ITSAIntermediate_VelaphiMhlanga.Models.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace ITSAIntermediate_VelaphiMhlanga.Controllers
 {
+    [Authorize]
     public class RecUsersController : Controller
     {
         private readonly ApplicationDbContext applicationDbContext;

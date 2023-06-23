@@ -16,14 +16,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var employeeDetails in Model)
+        @foreach (var employeeDetail in Model)
         {
             <tr>
-                <td>@employeeDetails.Id</td>
-                <td>@employeeDetails.Department</td>
-                <td>@employeeDetails.eRole></td>
-                <td>@employeeDetails.Salary.ToString("")</td>
-                <td><a href="EmployeeDetails/View/@employeeDetails.Department">View</a></td>
+                <td>@employeeDetail.Id</td>
+                <td>@employeeDetail.Department</td>
+                <td>@employeeDetail.eRole></td>
+                <td>@employeeDetail.Salary.ToString("")</td>
+                <td><a href="EmployeeDetails/View/@employeeDetail.Id">View</a></td>
             </tr>
         }
 
