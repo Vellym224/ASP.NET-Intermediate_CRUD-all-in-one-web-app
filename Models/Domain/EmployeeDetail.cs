@@ -7,5 +7,9 @@
         public string eRole { get; set; }
         public int Salary { get; set; }
 
+
+
+
+
     }
 }

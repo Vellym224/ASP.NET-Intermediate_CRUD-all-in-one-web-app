@@ -10,5 +10,7 @@
         public string Address { get; set; }
         public string EmailAddress { get; set; }
         public long ContactNumber { get; set; }
+
+
     }
 }

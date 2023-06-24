@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ITSAIntermediate_VelaphiMhlanga.Controllers
 {
     [Authorize]
+
     public class RecUsersController : Controller
     {
         private readonly ApplicationDbContext applicationDbContext;
